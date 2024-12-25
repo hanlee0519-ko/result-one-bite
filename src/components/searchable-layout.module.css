@@ -1,0 +1,21 @@
+.search_form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search_form > input {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+}
+
+.search_form > button {
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightskyblue;
+  color: white;
+  cursor: pointer;
+}
