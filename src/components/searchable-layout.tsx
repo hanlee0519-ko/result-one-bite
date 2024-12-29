@@ -29,17 +29,19 @@ export default function SearchableLayout({
   }, [q]);
 
   return (
-    <div>
-      <form onSubmit={handleOnSubmit} className={styles.search_form}>
-        <input
-          value={searchKeyword || ""}
-          onChange={handleOnChange}
-          type="search"
-          placeholder="검색어를 입력하세요..."
-        />
-        <button type="submit">{"검색"}</button>
-      </form>
+    <>
+      <section>
+        <form onSubmit={handleOnSubmit} className={styles.search_form}>
+          <input
+            value={searchKeyword || ""}
+            onChange={handleOnChange}
+            type="search"
+            placeholder="검색어를 입력하세요..."
+          />
+          <button type="submit">{"검색"}</button>
+        </form>
+      </section>
       {children}
-    </div>
+    </>
   );
 }
