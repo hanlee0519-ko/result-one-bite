@@ -1,7 +1,7 @@
 export default function Page() {
   return (
-    <section>
+    <article>
       <h1>{"Page: TEST"}</h1>
-    </section>
+    </article>
   );
 }

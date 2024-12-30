@@ -15,13 +15,13 @@ export default function BookItem({
   return (
     <Link href={`/books/${id}`} className={styles.container}>
       <img src={coverImgUrl} alt={title} />
-      <aside>
+      <article>
         <h4>{title}</h4>
         <h5>{subTitle}</h5>
         <footer>
           {author} | {publisher}
         </footer>
-      </aside>
+      </article>
     </Link>
   );
 }

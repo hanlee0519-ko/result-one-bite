@@ -4,6 +4,6 @@
   gap: 20px;
 }
 
-.container > section > h3 {
+.container > article > h3 {
   margin-bottom: 0px;
 }

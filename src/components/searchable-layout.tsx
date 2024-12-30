@@ -30,7 +30,7 @@ export default function SearchableLayout({
 
   return (
     <>
-      <section>
+      <article>
         <form onSubmit={handleOnSubmit} className={styles.search_form}>
           <input
             value={searchKeyword || ""}
@@ -40,7 +40,7 @@ export default function SearchableLayout({
           />
           <button type="submit">{"검색"}</button>
         </form>
-      </section>
+      </article>
       {children}
     </>
   );

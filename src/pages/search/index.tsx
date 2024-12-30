@@ -1,18 +1,31 @@
 import { ReactNode } from "react";
-import SearchableLayout from "@/components/searchable-layout";
+import { InferGetServerSidePropsType, GetServerSidePropsContext } from "next";
 
-import books from "@/mock/books.json";
+import SearchableLayout from "@/components/searchable-layout";
 import BookItem from "@/components/book-item";
 
-export default function Page() {
+import fetchBooks from "@/lib/fetch-books";
+
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const q = (context.query.q ?? "") as string;
+  const searchBooks = await fetchBooks(q);
+
+  return { props: { searchBooks } };
+};
+
+export default function Page({
+  searchBooks,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <section>
-      <section>
-        {books.map((book) => (
+    <>
+      <article>
+        {searchBooks.map((book) => (
           <BookItem key={book.id} {...book} />
         ))}
-      </section>
-    </section>
+      </article>
+    </>
   );
 }
 

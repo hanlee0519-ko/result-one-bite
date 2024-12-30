@@ -12,17 +12,17 @@
   width: 100px;
 }
 
-.container > h4 {
+.container > article > h4 {
   font-weight: 900;
   margin-top: 0;
   margin-bottom: 5px;
 }
 
-.container > h5 {
+.container > article > h5 {
   margin-top: 0;
 }
 
-.container > aside > footer {
+.container > article > footer {
   color: gray;
   font-size: 12px;
 }
